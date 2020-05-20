@@ -31,28 +31,35 @@ function buildBoard() {
     var size = 4
     var board = new Array(size)
 
+    var numOfBombs = 2;
+    
     for (var i = 0; i < board.length; i++) {
         board[i] = new Array(size)
     }
-
+    
     for (var i = 0; i < board.length; i++) {
         board[i]
         for (var j = 0; j < board[i].length; j++) {
             board[i][j] = {
-
+                
                 minesAroundCount: 0,
                 isShown: false,
                 isMine: false,
                 isMarked: false
-
             }
         }
     }
-    board[2][3].isMine = true;
-    board[2][3].isShown = true;
+    for (var i = 0; i < numOfBombs; i++) {
+        var iForBomb = getRandomInt(size)
+        for (var j = 0; j < array.length; j++) {
+            const element = array[j];
+            
+        }
+        var jForBomb = getRandomInt(size)
 
-    board[3][1].isMine = true;
-    board[3][1].isShown = true;
+
+    }
+
     return board
 }
 
@@ -162,4 +169,10 @@ function getCellCoord(strCellId) {
     coord.j = +strCellId.substring(2);
     // console.log('coord', coord);
     return coord;
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
