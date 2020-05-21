@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color:  #dac3a7;
+    background-color:  #cfa26b;
     color:black;
     
 }
@@ -24,3 +24,39 @@ img {
     max-width:100%; 
     
 } 
+
+.stopwatch 
+{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    font-family: monospace;
+    
+}
+
+h4 {
+    margin: 0 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-levels{
+    align-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.restart-button {
+    display: none;
+    margin-top: 10px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .restart-button button{
+    display: none;
+    border-radius: 10px;
+    font-size:  20px;
+  }

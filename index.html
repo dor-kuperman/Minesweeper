@@ -8,12 +8,24 @@
 </head>
 
 <body onload="init()">
+
+  <body oncontextmenu="return false;"></body>
+  <h4>choose your level:</h4>
+  <form class="form-levels">
+    <input type="radio" onclick="getLevel(this)" name="level-chooser" class="get-level" value="1"> beginner (4X4, 2 mines) <br>
+    <input type="radio" onclick="getLevel(this)" name="level-chooser" class="get-level" value="2" checked> medium (8X8, 15 mines) <br>
+    <input type="radio" onclick="getLevel(this)" name="level-chooser" class="get-level" value="3"> expert (12X12 30 mines)
+  </form>
+  <div class="stopwatch">0:00:00</div>
   <table class="center">
     <tbody class="game-board"></tbody>
-</table>
+  </table>
+  <div class="restart-button" onclick="init()">
+    <button>Restart game!</button>
+  </div>
   
-
-   <script src="js/minewseeper.js"></script>
+  <script src="js/minewseeper.js"></script>
 </body>
 
 </html>
+
