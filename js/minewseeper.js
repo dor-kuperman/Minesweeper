@@ -156,13 +156,19 @@ function renderBoard(board) {
             if (board[i][j].isShown) {
                 gGame.shownCounter++
             } else if (board[i][j].isMarked) {
+                gGame.markedCount++
                 gGame.shownCounter--
             }
         }
         
     }
+console.log(gLevel.mines);
+console.log(gGame.markedCount);
+console.log(gLevel.size ** 2);
+console.log(gLevel.size ** 2 - gLevel.mines);
+console.log(gGame.shownCounter);
 
-    if (gLevel.mines === gGame.markedCount && (gLevel.size ** 2 - gLevel.mines) === gGame.shownCounter) {
+    if (gLevel.mines === gGame.markedCount && gLevel.size ** 2 - gLevel.mines === (gGame.shownCounter - gGame.markedCount)) {
 
         var isTheGameWon = true
         isGameOver(isTheGameWon)
@@ -220,8 +226,6 @@ function cellClicked(cellClicked, event) {
     if (gGame.isOn === false) {
         return
     }
-
-
 
     gGame.isOn = true;
 
